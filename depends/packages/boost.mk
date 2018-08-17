@@ -1,9 +1,8 @@
 package=boost
-$(package)_version=1_47_0
-$(package)_download_path=http://sourceforge.net/projects/boost/files/boost/1.47.0
+$(package)_version=1_59_0
+$(package)_download_path=http://sourceforge.net/projects/boost/files/boost/1.59.0
 $(package)_file_name=$(package)_$($(package)_version).tar.bz2
-$(package)_sha256_hash=815a5d9faac4dbd523fbcf3fe1065e443c0bbf43427c44aa423422c6ec4c2e31
-$(package)_patches=libstdcpp3.hpp.patch
+$(package)_sha256_hash=727a932322d94287b62abb1bd2d41723eec4356a7728909e38adb65ca25241ca
 
 define $(package)_set_vars
 $(package)_config_opts_release=variant=release
@@ -26,8 +25,7 @@ $(package)_cxxflags_linux=-fPIC
 endef
 
 define $(package)_preprocess_cmds
-  echo "using $(boost_toolset_$(host_os)) : : $($(package)_cxx) : <cxxflags>\"$($(package)_cxxflags) $($(package)_cppflags)\" <linkflags>\"$($(package)_ldflags)\" <archiver>\"$(boost_archiver_$(host_os))\" <striper>\"$(host_STRIP)\"  <ranlib>\"$(host_RANLIB)\" <rc>\"$(host_WINDRES)\" : ;" > user-config.jam  && \
-  patch -p0 < $($(package)_patch_dir)/libstdcpp3.hpp.patch
+  echo "using $(boost_toolset_$(host_os)) : : $($(package)_cxx) : <cxxflags>\"$($(package)_cxxflags) $($(package)_cppflags)\" <linkflags>\"$($(package)_ldflags)\" <archiver>\"$(boost_archiver_$(host_os))\" <striper>\"$(host_STRIP)\"  <ranlib>\"$(host_RANLIB)\" <rc>\"$(host_WINDRES)\" : ;" > user-config.jam
 endef
 
 define $(package)_config_cmds
