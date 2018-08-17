@@ -49,6 +49,13 @@ win32 {
 # Dependency library locations can be customized with:
 #    BOOST_INCLUDE_PATH, BOOST_LIB_PATH, BDB_INCLUDE_PATH,
 #    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
+BOOST_LIB_PATH=../depends/x86_64-pc-linux-gnu/lib
+BDB_LIB_PATH=../depends/x86_64-pc-linux-gnu/lib
+OPENSSL_LIB_PATH=../depends/x86_64-pc-linux-gnu/lib
+BOOST_INCLUDE_PATH=../depends/x86_64-pc-linux-gnu/include/boost
+BDB_INCLUDE_PATH=../depends/x86_64-pc-linux-gnu/include
+OPENSSL_INCLUDE_PATH=../depends/x86_64-pc-linux-gnu/include/openssl
+
 
 OBJECTS_DIR = build
 MOC_DIR = build
