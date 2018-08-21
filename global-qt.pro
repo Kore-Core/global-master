@@ -4,7 +4,7 @@ TEMPLATE = app
 DEFINES += fName1 fName2
 fName1 = "global-qt"
 macx:TARGET = global-qt
-VERSION = 1.4.0.0
+VERSION =  1.4.0.0
 QMAKE_TARGET_BUNDLE_PREFIX = co.renesis
 contains(QT_ARCH, i386) {
     fName2 = "-x86-v"
