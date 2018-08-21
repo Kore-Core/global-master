@@ -1144,7 +1144,7 @@ static const char *strDNSSeed[][2] = {
     {"global-node4.mooo.com", "global-node4.mooo.com"},
     {"global-node5.mooo.com", "global-node5.mooo.com"},	
     {"global-node6.mooo.com", "global-node6.mooo.com"},
-    {"global-node7.mooo.com", "global-node7.mooo.com"},
+    {"159.65.82.223", "159.65.82.223"},
 };
 
 void ThreadDNSAddressSeed(void* parg)
